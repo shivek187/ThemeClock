@@ -1,0 +1,109 @@
+*{
+     box-sizing: border-box;
+}
+
+:root{
+     --primary-color: #000;
+     --secondary-color: #fff;
+}
+
+html.dark{
+     --primary-color: #fff;
+     --secondary-color: #333;
+}
+
+html.dark{
+     background-color: #111;
+     color: var(--primary-color);
+}
+
+body{
+     font-family: 'Roboto', sans-serif;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     overflow: hidden;
+     margin: 0;
+     transition: all 0.7s ease-in;
+}
+
+.toggle{
+     cursor: pointer;
+     background-color: var(--primary-color);
+     color: var(--secondary-color);
+     border-radius: 40px;
+     padding: 8px 12px;
+     position: absolute;
+     top: 50px;
+}
+
+.toggle:focus{
+     outline:none;
+}
+
+.clock{
+     position: relative;
+     width: 200px;
+     height: 200px;
+     background-color: #F0EBE3;
+}
+
+ .needle{
+      background-color: black;
+      position: absolute;
+      top: 50%; left: 50%;
+      height: 65px;
+      width: 3px;
+      transform-origin: bottom center;
+}
+
+.needle.hour{
+     transform: translate(-50%, -100%)rotate(300deg);
+}
+
+.needle.minute{
+     transform: translate(-50%, -100%)rotate(0deg);
+     height: 100px;
+}
+
+.needle.second{
+     transform: translate(-50%, -100%)rotate(95deg);
+     height: 100px;
+     background-color: purple;
+}
+
+.centerPoint{
+     background-color: black;
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     position: absolute;
+     top: 50%; left:50%;
+     transform: translate(-50%,-50%);
+}
+
+.time{
+     font-size: 70px;
+}
+
+.date{
+     color: var(--primary-color);
+     font-family:'Lucida Handwriting',cursive;
+     font-size: 14px;
+     text-transform: uppercase;
+}
+
+.circle{
+     background-color: var(--primary-color);
+     color: var(--secondary-color);
+     border-radius: 50%;
+     height: 30px; width: 30px;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     line-height: 18px;
+     transition: all 0.5s ease-in;
+     font-size: 18px;
+}
